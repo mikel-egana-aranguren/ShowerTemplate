@@ -26,7 +26,8 @@ Copy `index.html` from `ShowerTemplate` to each chapter folder. Change paths tha
 
 * `<link rel="stylesheet" href="../ShowerTemplate/shower/themes`
 * `<img src="../ShowerTemplate/pictures/ehu.png"`
-* `<script src="../ShowerTemplate/shower.js"></script>`
+* `<img src="../ShowerTemplate/pictures/by.png" alt="Creative Commons BY" height="10%">`
+* `<script src="../ShowerTemplate/shower/shower.js"></script>`
 
 Start editing `index.html`.
 
