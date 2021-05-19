@@ -1,26 +1,40 @@
 # Shower presentations
 
-## Installation
+Shower is a JS library for presentations, so these instructions assume that you already have a Git repo where your slides will live (A repo for a whole course, divided into chapters).
 
-In the main repo folder, add this template as a submodule:
+## Installation of Shower
+
+In the main repo folder, add this Shower template as a submodule:
 
 ```bash
 git submodule add https://github.com/mikel-egana-aranguren/ShowerTemplate.git ShowerTemplate
-git commit -m "Add subdmodule"
+git commit -m "Add subdmodule for Shower"
 git push
 ```
 
-Copy `index.html` to appropiate folder, change `shower` paths accordingly, and start editing.
-
-## Create PDF version of presentation
-
-To print as PDF, install `shower` if necessary and then (`sudo npm install -g @shower/cli`) and then in the folder containing `index.html`:
+Create a folder for each chapter at the root level of the repo e.g.:
 
 ```bash
-shower pdf
+Introduction/
+Security/
+ShowerTemplate/
+LICENSE
+README.md
 ```
 
-## Release presentation
+Copy `index.html` from `ShowerTemplate` to each chapter folder. Change paths that refer to shower elements by adding `../ShowerTemplate/` at the beggining. At least, as a suggestion:
+
+* `<link rel="stylesheet" href="../ShowerTemplate/shower/themes`
+* `<img src="../ShowerTemplate/pictures/ehu.png"`
+* `<script src="../ShowerTemplate/shower.js"></script>`
+
+Start editing `index.html`.
+
+(If, instead of a course with different chapters, you have only a file for e.g. a talk, you can copy `index.html` to the root level and use directly the `ShowerTemplate/shower` path)
+
+## Release of the presentation
+
+Assuming a [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) based repo:
 
 * Merge `develop` into `releases`.
 * (Optionally) Login to [Zenodo](https://zenodo.org/).
@@ -30,3 +44,21 @@ shower pdf
 * Add DOI badge to `index.html` and `README.md`.
 * Merge `releases` into `main`.
 * Merge `main` into `develop`.
+
+## Extras
+
+### PDF version
+
+To print as PDF, install `shower` if necessary (`sudo npm install -g @shower/cli`) and then in the folder containing `index.html`:
+
+```bash
+shower pdf
+```
+
+**IMPORTANT NOTE**: MathJax equations are not properly printed.
+
+### MathJax
+
+The template includes the [MathJax library](https://www.mathjax.org/) for rendering equations.
+
+For more information on how to use [MathJax](http://docs.mathjax.org/en/latest/) look at [this thread](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
