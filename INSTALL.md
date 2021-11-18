@@ -2,6 +2,8 @@
 
 Shower is a JS library for presentations, so these instructions assume that you already have a Git repo where your slides will live (A repo for a whole course, divided into chapters).
 
+Examples on how to use Shower: https://shwr.me/
+
 ## Installation of Shower
 
 In the main repo folder, add this Shower template as a submodule:
@@ -63,3 +65,4 @@ shower pdf
 The template includes the [MathJax library](https://www.mathjax.org/) for rendering equations.
 
 For more information on how to use [MathJax](http://docs.mathjax.org/en/latest/) look at [this thread](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
+
