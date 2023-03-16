@@ -46,13 +46,13 @@ Use SVG format.
 
 Assuming a [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) based repo:
 
-* Merge `develop` into `releases`. Optionally edit `RELEASES.md`.
+* Merge `develop` into `release_*`. Optionally edit `RELEASES.md`.
 * (Optionally) Login to [Zenodo](https://zenodo.org/).
 * (Optionally) Under user name, click on option GitHub.
 * (Optionally) Activate GitHub repo.
-* Create a release in GitHub from branch `releases`.
+* Create a release in GitHub from branch `release_*`.
 * Add DOI badge to `index.html` and `README.md`.
-* Merge `releases` into `main` and `releases` into `develop`.
+* Merge `release_*` into `main` and `develop`.
 
 ## PDF version
 
