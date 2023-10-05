@@ -46,13 +46,15 @@ Use SVG format.
 
 Assuming a [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/) based repo:
 
-* Merge `develop` into `release_*`. Optionally edit `RELEASES.md`.
+* Work happens in `feature_*` branches, when finished merge into develop (`git merge --no-ff myfeature`) and delete the feature branch (`git branch -d myfeature`). It is important to add the No Fast Forward option to keep the history separated if the develop lacks intermediate commits (My case since single developer).
+* Create a `release_*` branch from `develop`: `git checkout -b release-1.2 develop`. Edit `RELEASES.md` and push.
+* Merge `release_*` branch into `develop` and `main`: `git merge --no-ff release-1.2`.
 * (Optionally) Login to [Zenodo](https://zenodo.org/).
 * (Optionally) Under user name, click on option GitHub.
 * (Optionally) Activate GitHub repo.
-* Create a release in GitHub from branch `release_*`.
-* Add DOI badge to `index.html` and `README.md`.
-* Merge `release_*` into `main` and `develop`.
+* (Optionally) Tag release in main: `git tag -a 1.2`.
+* (Optionally) Create a release in GitHub from `main`.
+* (Optionally) Add DOI badge to `index.html` and `README.md`.
 
 ## PDF version
 
