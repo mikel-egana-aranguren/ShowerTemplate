@@ -2,7 +2,7 @@
 
 for dir in */
 do 
-    if [ $dir != "ShowerTemplate/" ] && [ $dir != "Conferencias/" ]
+    if [ $dir != "ShowerTemplate/" ] && [ $dir != "Conferencias/" ] && [ $dir != "Laboratorios/" ] && [ $dir != "Laborategiak/" ]
     then 
         proper_dir=${dir%/}
         m0=$(cat $PWD/$proper_dir/index.html.md5sum)
